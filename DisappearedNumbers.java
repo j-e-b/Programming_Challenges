@@ -18,7 +18,7 @@ import java.util.*;
 *	[5,6]
 */
 
-class disappearedNumbers
+class DisappearedNumbers
 {
     public List<Integer> findDisappearedNumbers(int[] nums)
 		{
