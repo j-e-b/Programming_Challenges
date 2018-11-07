@@ -8,7 +8,7 @@ import java.util.*;
 *
 *	Could you do it without extra space and in O(n) runtime? You may assume the
 *	returned list does not count as extra space.
-*
+* ----------------------
 *	Example:
 *
 *	Input:
@@ -16,6 +16,7 @@ import java.util.*;
 *
 *	Output:
 *	[5,6]
+* ----------------------
 */
 
 class DisappearedNumbers
