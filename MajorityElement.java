@@ -11,42 +11,41 @@ import java.util.*;
 *
 *	Input: [3,2,3]
 *	Output: 3
-* ------------------------
+* 	------------------------
 *	Example 2:
 *
 *	Input: [2,2,1,1,1,2,2]
 *	Output: 2
-* ------------------------
+*	------------------------
 */
 
 class MajorityElement
 {
-    public int majorityElement(int[] nums)
-		{
+	public int majorityElement(int[] nums)
+	{
 
-    	HashMap<Integer, Integer> hash = new HashMap<Integer, Integer>();
-		 	int result = Integer.MIN_VALUE;
+    		HashMap<Integer, Integer> hash = new HashMap<Integer, Integer>();
+		int result = Integer.MIN_VALUE;
 
-      for (int i = 0; i < nums.length; i++)
-      {
-      	if (hash.containsKey(nums[i]))
-       	{
-       		int num = hash.get(nums[i]);
-					hash.put(nums[i], num + 1);
-        }
-        else
-        {
-          hash.put(nums[i], 1);
-        }
+		for (int i = 0; i < nums.length; i++)
+      		{
+      			if (hash.containsKey(nums[i]))
+       			{
+       				int num = hash.get(nums[i]);
+				hash.put(nums[i], num + 1);
+        		}
+        		else
+        		{
+          			hash.put(nums[i], 1);
+        		}
 
-        if (hash.get(nums[i]) > nums.length / 2)
-        {
-        	result = nums[i];
-         	break;
-        }
-			}
+        		if (hash.get(nums[i]) > nums.length / 2)
+        		{
+        			result = nums[i];
+         			break;
+        		}
+		}
 
- 			return result;
-
+ 		return result;
     }
 }

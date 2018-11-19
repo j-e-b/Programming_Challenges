@@ -8,7 +8,7 @@ import java.util.*;
 *
 *	Could you do it without extra space and in O(n) runtime? You may assume the
 *	returned list does not count as extra space.
-* ----------------------
+* 	----------------------
 *	Example:
 *
 *	Input:
@@ -16,32 +16,30 @@ import java.util.*;
 *
 *	Output:
 *	[5,6]
-* ----------------------
+* 	----------------------
 */
 
 class DisappearedNumbers
 {
-    public List<Integer> findDisappearedNumbers(int[] nums)
+	public List<Integer> findDisappearedNumbers(int[] nums)
+	{
+		List<Integer> list = new ArrayList<Integer>();
+
+		int[] seen = new int[nums.length];
+
+		for (int i = 0; i < nums.length; i++)
 		{
-        List<Integer> list = new ArrayList<Integer>();
+		    seen[nums[i] - 1] = 1;
+		}
 
-        int[] seen = new int[nums.length];
+		for (int i = 0; i < nums.length; i++)
+		{
+		    if (seen[i] == 0)
+		    {
+			list.add(i + 1);
+		    }
+		}
 
-        for (int i = 0; i < nums.length; i++)
-        {
-            seen[nums[i] - 1] = 1;
-        }
-
-        for (int i = 0; i < nums.length; i++)
-        {
-            if (seen[i] == 0)
-            {
-                list.add(i + 1);
-            }
-        }
-
-        return list;
-
-
-    }
+		return list;
+	}
 }
