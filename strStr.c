@@ -1,6 +1,23 @@
 #include <stdio.h>
 #include <string.h>
 
+/*
+Return the index of the first occurrence of needle in haystack, or -1 if needle
+is not part of haystack.
+--------------------------
+Example 1:
+
+Input: haystack = "hello", needle = "ll"
+Output: 2
+--------------------------
+Example 2:
+
+Input: haystack = "aaaaa", needle = "bba"
+Output: -1
+--------------------------
+If either string is NULL or if the needle is the empty string, simply return 0;
+*/
+
 int strStr(char *haystack, char *needle)
 {
 	int hayLen;
