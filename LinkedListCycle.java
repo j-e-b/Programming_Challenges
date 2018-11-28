@@ -1,3 +1,10 @@
+/*
+Given a linked list, determine if it has a cycle in it.
+
+Follow up:
+Can you solve it without using extra space?
+*/
+
 class LinkedListCycle
 {
 	class ListNode
@@ -12,6 +19,7 @@ class LinkedListCycle
 		}
 	}
 
+	// Space Complexity: O(1).
 	public boolean hasCycleRecur(ListNode slow, ListNode fast)
 	{
 		if (fast == null || fast.next == null)
