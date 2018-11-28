@@ -38,8 +38,3 @@ TreeNode *constructMaxBinaryTree(int *nums, int numsSize)
 
 	return root;
 }
-
-int main(void)
-{
-	return 0;
-}
