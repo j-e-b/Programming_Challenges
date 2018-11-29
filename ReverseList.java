@@ -27,6 +27,7 @@ public ReverseList
 				ListNode temp = head;
 				ListNode sol;
 
+				// Push each element on to the stack.
 				while (temp != null)
 				{
 					stack.addFirst(temp.val);
@@ -41,6 +42,7 @@ public ReverseList
 
 				temp = sol;
 
+				// Pop from the stack.
 				while (stack.size() > 0)
 				{
 					temp.next = new ListNode(stack.removeFirst());
