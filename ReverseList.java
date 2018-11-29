@@ -51,4 +51,43 @@ public ReverseList
 
 				return sol;
 	}
+
+	public void reverseListRecursiveHelper(ListNode sol, Deque<Integer> stack)
+	{
+		if (stack.size() == 0)
+		{
+			return;
+		}
+
+		sol.next = new ListNode(stack.removeFirst());
+		reverseListRecursiveHelper(sol.next, stack);
+	}
+
+	public void fillStack(ListNode temp, Deque<Integer> stack)
+	{
+		if (temp == null)
+		{
+			return;
+		}
+
+		stack.addFirst(temp.val);
+		fillStack(temp.next, stack);
+	}
+
+	public ListNode reverseListRecursive(ListNode head)
+	{
+		Deque<Integer> stack = new ArrayDeque<Integer>();
+		ListNode sol == null;
+
+		fillStack(head, stack);
+
+		if (stack.size() > 0)
+		{
+			sol = new ListNode(stack.removeFirst());
+		}
+
+		reverseListRecursiveHelper(sol, stack);
+
+		return sol;
+	}
 }
