@@ -30,7 +30,7 @@ class IsPalindrome
 	{
 		long reverseNum = 0;
 
-		if ( x < 0)
+		if (x < 0)
 			return false;
 
 		if (x % 10 == 0 && x != 0)
