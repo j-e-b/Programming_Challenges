@@ -26,7 +26,7 @@ Coud you solve it without converting the integer to a string?
 
 class IsPalindrome
 {
-	public boolean IsPalindrome(int x)
+	public boolean isPalindrome(int x)
 	{
 		long reverseNum = 0;
 
