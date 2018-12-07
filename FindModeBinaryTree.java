@@ -1,5 +1,23 @@
 import java.util.*;
 
+/*
+Given a binary tree , find all the mode(s) (the most frequently occurred
+element) in the given binary tree.
+
+For example:
+Given binary tree: [1,null,2,2],
+
+   1
+    \
+     2
+    /
+   2
+
+return [2].
+
+Note: If a tree has more than one mode, you can return them in any order.
+*/
+
 class FindModeBinaryTree
 {
 	public class TreeNode
@@ -9,7 +27,7 @@ class FindModeBinaryTree
 		TreeNode right;
 		TreeNode(int x) { val = x; }
 	}
-	
+
 	HashMap<Integer, Integer> freqs = new HashMap<Integer, Integer>();
 	int mode = 0;
 
