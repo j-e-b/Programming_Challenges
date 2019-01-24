@@ -21,12 +21,6 @@ class Printer
 		}
 
 		i++;
-		/*
-		if (twos > numStatues && numStatues != 1)
-		{
-			i++;
-		}
-		*/
 
 		System.out.println(i);
 	}
